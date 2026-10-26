@@ -7,6 +7,8 @@
 ![面板截图](docs/screenshot.png)
 
 > 非官方项目，与开发商 Jutsu Games 无任何关联。仅供单机自用/学习交流。
+>
+> 本项目基于 MIT 协议**免费开源**，请勿用于商业售卖。
 
 ## 功能
 
@@ -77,6 +79,9 @@ MIT。BepInEx 为 LGPL-2.1，本项目仅依赖它，不包含其源码。
 ## English
 
 In-game cheat panel for **Infection Free Zone** (Unity 6 / Mono), loaded by **BepInEx 5**.
+
+> Unofficial project, not affiliated with Jutsu Games. MIT licensed and **free to use** —
+> please do not sell it.
 
 Press **F7** in game to open a draggable panel that:
 
