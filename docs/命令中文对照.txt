@@ -1,0 +1,10 @@
+# 命令中文对照表（可选）
+# 放到 <游戏目录>\BepInEx\config\命令中文对照.txt 后重启游戏生效
+#
+# 格式：命令名 <TAB> 中文说明
+# 以 # 开头的行为注释，内置表已覆盖 178 条命令，这里只用于自定义/覆盖。
+#
+# 示例：
+# AddResourcesToHq	给总部加资源
+# SpawnVehicle	刷车辆
+# ImmortalWalls	城墙不毁
