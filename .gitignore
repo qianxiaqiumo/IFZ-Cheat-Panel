@@ -1,8 +1,10 @@
 # 构建产物
 bin/
 obj/
+dist/
 *.dll
 *.pdb
+*.zip
 
 # 调试输出
 diag.txt
