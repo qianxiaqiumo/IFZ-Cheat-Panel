@@ -316,8 +316,8 @@ namespace IfzCheat
 
         private string Status()
         {
-            if (_handlerType == null) return "状态：等待进入游戏……（主菜单/加载中）";
-            if (_instance == null) return "状态：未找到命令实例，游戏版本可能已变动";
+            if (_handlerType == null) return "状态：未找到命令处理器，游戏版本可能已变动";
+            if (_instance == null) return "状态：等待进入存档……（读档后自动扫描命令）";
             return "状态：已连接，共 " + _cmds.Count + " 条命令";
         }
 
@@ -327,7 +327,7 @@ namespace IfzCheat
             {
                 _panelStyle = new GUIStyle(GUI.skin.box);
                 var tex = new Texture2D(1, 1);
-                tex.SetPixel(0, 0, new Color(0.97f, 0.97f, 0.98f, 0.97f));
+                tex.SetPixel(0, 0, new Color(0.97f, 0.975f, 1f, 1f));
                 tex.Apply();
                 _panelStyle.normal.background = tex;
                 _panelStyle.padding = new RectOffset(12, 12, 10, 10);
@@ -687,6 +687,13 @@ namespace IfzCheat
             }
 
             GUILayout.BeginArea(new Rect(_winX, _winY, w, h), PanelStyle());
+            // 1px 深色描边，让面板边界清楚
+            GUI.color = new Color(0.35f, 0.38f, 0.45f, 1f);
+            GUI.DrawTexture(new Rect(0f, 0f, w, 1f), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(0f, h - 1f, w, 1f), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(0f, 0f, 1f, h), Texture2D.whiteTexture);
+            GUI.DrawTexture(new Rect(w - 1f, 0f, 1f, h), Texture2D.whiteTexture);
+            GUI.color = Color.white;
             menuScroll = GUILayout.BeginScrollView(menuScroll);
 
             GUILayout.Label("<b>无感染区 控制台面板</b>   F7 开关   （按住这行可拖动窗口）");
